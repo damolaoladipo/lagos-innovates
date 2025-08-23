@@ -2,7 +2,7 @@ import "@/app/globals.css";
 
 import type { Metadata } from "next";
 import { AppProvider } from "@/contexts/app-provider";
-import { siteConfig } from "../_data/siteConfig";
+import { siteConfig } from "../_data/site-config";
 import { useLasgFont } from "@/_data/fonts";
 
 export const metadata: Metadata = {

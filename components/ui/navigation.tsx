@@ -4,7 +4,7 @@ import Link from "next/link";
 import * as React from "react";
 import { ReactNode } from "react";
 
-import { siteConfig } from "@/_data/siteConfig";
+import { siteConfig } from "@/_data/site-config";
 import { cn } from "@/lib/utils";
 
 import LaunchUI from "../logos/launch-ui";

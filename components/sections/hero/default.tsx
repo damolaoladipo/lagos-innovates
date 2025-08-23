@@ -1,75 +1,22 @@
-import { ArrowRightIcon, ShoppingBag, ShoppingCart } from "lucide-react";
-import { ReactNode } from "react";
-
-import { siteConfig } from "@/_data/siteConfig";
+import { IHero } from "@/utils/interfaces";
+import { heroData } from "@/_data/hero";
+import { Section } from "@/components/ui/section";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { Mockup, MockupFrame } from "@/components/ui/mockup";
+import Glow from "@/components/ui/glow";
 
-import Github from "../../logos/github";
-import { Badge } from "../../ui/badge";
-import { Button, type ButtonProps } from "../../ui/button";
-import Glow from "../../ui/glow";
-import { Mockup, MockupFrame } from "../../ui/mockup";
-import Screenshot from "../../ui/screenshot";
-import { Section } from "../../ui/section";
+const Hero = (data: IHero) => {
 
-interface HeroButtonProps {
-  href: string;
-  text: string;
-  variant?: ButtonProps["variant"];
-  icon?: ReactNode;
-  iconRight?: ReactNode;
-}
+  const {
+    title = heroData.title,
+    description = heroData.description,
+    mockup = heroData.mockup,
+    badge = heroData.badge,
+    buttons = heroData.buttons,
+    className
+  } = data;
 
-interface HeroProps {
-  title?: string;
-  description?: string;
-  mockup?: ReactNode | false;
-  badge?: ReactNode | false;
-  buttons?: HeroButtonProps[] | false;
-  className?: string;
-}
-
-//Smart, modern websites built to win clients and grow your business. A website that helps your business stand out turn visitors into customers. 
-
-export default function Hero({
-  title = "Quality you can trust and build on.",
-  description = "",
-  mockup = (
-    <Screenshot
-      srcLight="/dashboard-light.png"
-      srcDark="/dashboard-dark.png"
-      alt="Launch UI app screenshot"
-      width={1248}
-      height={765}
-      className="w-full"
-    />
-  ),
-  badge = (
-    <Badge variant="outline" className="animate-appear">
-      <span className="text-muted-foreground">
-        Call +2349061590172 !
-      </span>
-      <a href={siteConfig.getStartedUrl} className="flex items-center gap-1">
-        Get started
-        <ArrowRightIcon className="size-3" />
-      </a>
-    </Badge>
-  ),
-  buttons = [
-    {
-      href: siteConfig.getStartedUrl,
-      text: "Pre-Order Now",
-      variant: "default",
-    },
-    {
-      href: siteConfig.links.github,
-      text: "Buy now",
-      variant: "glow",
-      icon: <ShoppingCart className="mr-2 size-4" />,
-    },
-  ],
-  className,
-}: HeroProps) {
   return (
     <Section
       className={cn(
@@ -77,7 +24,7 @@ export default function Hero({
         className,
       )}
     >
-      <div className="max-w-container mx-auto flex flex-col gap-12 pt-16 sm:gap-24 ">
+      <div className="max-w-container mx-auto flex flex-col gap-12 pt-16 sm:gap-24">
         <div className="flex flex-col items-center gap-6 text-center sm:gap-12">
           {!badge !== false && badge}
           <h1 className="animate-appear from-foreground to-foreground dark:to-muted-foreground relative z-10 inline-block bg-linear-to-r bg-clip-text text-4xl leading-tight font-semibold text-balance text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-8xl md:leading-tight">
@@ -107,12 +54,12 @@ export default function Hero({
           {mockup !== false && (
             <div className="relative w-full pt-12">
               <MockupFrame
-                className="animate-appear opacity-0 delay-700 "
+                className="animate-appear opacity-0 delay-700"
                 size="small"
               >
                 <Mockup
                   type="responsive"
-                  className="bg-green-400/90 w-full rounded-xl border-0"
+                  className="w-full rounded-xl border-0 bg-green-400/90"
                 >
                   {mockup}
                 </Mockup>
@@ -128,4 +75,6 @@ export default function Hero({
       </div>
     </Section>
   );
-}
+};
+
+export default Hero;
