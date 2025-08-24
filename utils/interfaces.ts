@@ -17,3 +17,17 @@ export interface IHero {
   buttons?: IHeroButton[] | false;
   className?: string;
 }
+
+export interface ITestimonials {
+  title: string;
+  items: ITestimonial[];
+}
+
+export interface ITestimonial {
+  id: string
+  quote?: string
+  author?: string
+  role?: string
+  description?: string
+  videoUrl?: string
+}
