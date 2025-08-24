@@ -2,6 +2,7 @@ export const Programs = {
   heading: "Our programs made for you",
   items: [
     {
+      id: "hub-loans",
       title: "Hub Loans",
       description:
         "Hub Loans are available to operators of co-working spaces, incubators and hubs in Lagos State on very attractive terms: 9 percent interest for four years. Lagos Innovates recognises the vital role that co-working spaces, incubators and hubs play in the Lagos startup ecosystem. By taking a community-focused approach, and through their programs, mentorship, networks and resources, they help catalyse growth opportunities for high potential entrepreneurs and startups. Lagos Innovates is making meaningful capital available on very attractive terms to high-performing, outcome-focused workspace providers in Lagos State. The Hub Loan program is available to operators who are looking to fund expansion or improvement of their existing facilities at current sites, or to increase their number of locations.",
@@ -13,12 +14,19 @@ export const Programs = {
       ],
       selection: [
         "Hub Loan applications must be made online and will be judged entirely on their individual merits, subject to the business meeting the eligibility criteria for a Hub Loan.",
+        "Additional information can be found in the Hub Loan Applications Guidelines, downloadable below.",
       ],
-      guideline:
-        "Additional information can be found in the Hub Loan Applications Guidelines, downloadable below. (Download: Lagos Innovates  Hub Loan Guidelines  July 2022).",
-      cta: "Apply now",
+      guideline: {
+        label: "Download: Lagos Innovates Hub Loan Guidelines",
+        link: "#",
+      },
+      cta: {
+        label: "Apply now",
+        link: "#",
+      },
     },
     {
+      id: "talent-development",
       title: "Talent Development Programme",
       description:
         "The Talent Development Programme enables aspiring and existing tech professionals to upskill by granting them access to courses through a student loan program. Lagos Innovates, in partnership with Honeywell Group, is supporting capacity development to build a formidable tech talent pipeline and improve the investability of startups in Lagos. The program funds up to 80% of the cost of attendance for high-potential individuals such as founders, developers, or startup employees active in the Lagos ecosystem.",
@@ -28,10 +36,17 @@ export const Programs = {
       selection: [
         "Candidates apply online. Selection is merit-based and focused on individuals who show the highest potential to contribute to the Lagos startup ecosystem.",
       ],
-      guideline: "Download: Lagos Innovates – Talent Development Guidelines.",
-      cta: "Apply now",
+      guideline: {
+        label: "Download: Lagos Innovates - Talent Development Guidelines.",
+        link: "#",
+      },
+      cta: {
+        label: "Apply now",
+        link: "#",
+      },
     },
     {
+      id: "workspace-voucher",
       title: "Workspace Vouchers",
       description:
         "Workspace Vouchers offer high-potential new founders and teams a significant discount on membership costs at Lagos Innovates’ Partner Hubs. The vouchers support very early-stage ventures by facilitating access to affordable, well-equipped workspaces. Lagos Innovates covers 30% to 75% of membership costs for 3 to 12 months, depending on stage. Applications are competitive and merit-based.",
@@ -47,9 +62,14 @@ export const Programs = {
         "Maximum score is 100 points. A minimum of 50 points is required. Vouchers are awarded to the highest scoring ventures until exhausted.",
         "Third-party recommendations (from founders, investors, hub operators, etc.) are not mandatory but can boost scores.",
       ],
-      guideline:
-        "Download: Lagos Innovates – Workspace Voucher Guidelines – FINAL December 2021.",
-      cta: "Apply now",
+      guideline: {
+        label: "Download: Lagos Innovates - Workspace Voucher Guidelines.",
+        link: "#",
+      },
+      cta: {
+        label: "Apply now",
+        link: "#",
+      },
     },
   ],
 };
