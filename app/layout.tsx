@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "Mikolaj Dobrucki",
-      url: "https://mikolajdobrucki.com",
+      name: "Damola Oladipo",
+      url: "https://damolaoladipo.com",
     },
   ],
   creator: "mikolajdobrucki",

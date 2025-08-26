@@ -12,7 +12,7 @@ export interface IHeroButton {
 export interface IHero {
   title?: string;
   description?: string;
-  mockup?: ReactNode | false;
+  mockup?: ReactNode | false | boolean | string;
   badge?: ReactNode | false;
   buttons?: IHeroButton[] | false;
   className?: string;
