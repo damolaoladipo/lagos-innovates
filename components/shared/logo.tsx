@@ -9,10 +9,10 @@ export const Logo = ({ className, uniColor }: { className?: string; uniColor?: b
 
   // if uniColor is true, always use a single-color logo regardless of theme
   const logoSrc = uniColor
-    ? "/blocks/lagos-innovates-light.png"
+    ? "/blocks/lagos-innovates.png"
     : resolvedTheme === "dark"
-    ? "/blocks/lagos-innovates-light.png"
-    : "/blocks/lagos-innovates-light.png";
+    ? "/blocks/lagos-innovates.png"
+    : "/blocks/lagos-innovates.png";
 
   return (
     <img
