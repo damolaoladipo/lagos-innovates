@@ -1,35 +1,37 @@
 export const heroData = {
-  heading:
-    "Lagos Innovates supports tech founders, enthusiasts and startups by facilitating access to high-quality workspaces and infrastructure, learning, incubation, investor and peer networks.",
+  heading: "Empowering the next generation of innovators in Lagos.",
   subheading:
-    "facilitating access to high-quality workspaces and infrastructure, learning, incubation, investor and peer networks.",
+    "We support tech founders, and Startups by facilitating access to high-quality workspaces and infrastructure, learning, incubation, investor and peer networks.",
+
   mockup: {
-    light: "/hero-light.png",
-    dark: "/hero-dark.png",
-    alt: "inovation image",
-    width: 1248,
-    height: 765,
-  },
-
-  badge: {
-    text: "Call +2349061590172 !",
-    cta: {
-      href: "/get-started",
-      text: "Get started",
+    light: {
+      src: "/blocks/og-image.png",
+      alt: "innovation image",
+      width: 1248,
+      height: 765,
+    },
+    dark: {
+      src: "/blocks/og-image.png",
+      alt: "innovation image",
+      width: 1248,
+      height: 765,
     },
   },
 
-  buttons: [
-    {
-      href: "/get-started",
-      text: "Pre-Order Now",
-      variant: "default" as const,
-    },
-    {
-      href: "/buy-now",
-      text: "Buy now",
-      variant: "glow" as const,
-      icon: "shopping-cart",
-    },
-  ],
+  button1: {
+    id: "01",
+    href: "/get-started",
+    text: "View Programs",
+    variant: "default" as const,
+  },
+  button2: {
+    id: "02",
+    href: "/buy-now",
+    text: "Learn More",
+    variant: "glow" as const,
+    icon: "Arrow",
+  },
+  partners: {
+    text: "Meet our partners"
+  }
 };

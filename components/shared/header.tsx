@@ -1,18 +1,14 @@
 'use client'
 import Link from 'next/link'
-import { Logo } from '@/components/logo'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import React from 'react'
 import { cn } from '@/lib/utils'
 import { useScroll } from 'motion/react'
+import { Logo } from '@/components/shared/logo'
+import { Navigation } from '@/_data/nav-bar'
 
-const menuItems = [
-    { name: 'Features', href: '#link' },
-    { name: 'Solution', href: '#link' },
-    { name: 'Pricing', href: '#link' },
-    { name: 'About', href: '#link' },
-]
+
 
 export const HeroHeader = () => {
     const [menuState, setMenuState] = React.useState(false)
@@ -52,12 +48,12 @@ export const HeroHeader = () => {
 
                             <div className="hidden lg:block">
                                 <ul className="flex gap-8 text-sm">
-                                    {menuItems.map((item, index) => (
+                                    {Navigation.map((item, index) => (
                                         <li key={index}>
                                             <Link
                                                 href={item.href}
                                                 className="text-muted-foreground hover:text-accent-foreground block duration-150">
-                                                <span>{item.name}</span>
+                                                <span>{item.label}</span>
                                             </Link>
                                         </li>
                                     ))}
@@ -68,26 +64,19 @@ export const HeroHeader = () => {
                         <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
                             <div className="lg:hidden">
                                 <ul className="space-y-6 text-base">
-                                    {menuItems.map((item, index) => (
+                                    {Navigation.map((item, index) => (
                                         <li key={index}>
                                             <Link
                                                 href={item.href}
                                                 className="text-muted-foreground hover:text-accent-foreground block duration-150">
-                                                <span>{item.name}</span>
+                                                <span>{item.label}</span>
                                             </Link>
                                         </li>
                                     ))}
                                 </ul>
                             </div>
                             <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                                <Button
-                                    asChild
-                                    variant="outline"
-                                    size="sm">
-                                    <Link href="#">
-                                        <span>Login</span>
-                                    </Link>
-                                </Button>
+        
                                 <Button
                                     asChild
                                     size="sm">

@@ -7,7 +7,7 @@ import { ReactNode } from "react";
 import { siteConfig } from "@/_data/site-config";
 import { cn } from "@/lib/utils";
 
-import LaunchUI from "../logos/launch-ui";
+import LaunchUI from "../logos/lagos-innovates";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -99,7 +99,7 @@ export default function Navigation({
     },
   ],
   logo = <LaunchUI />,
-  logoTitle = "Launch UI",
+  logoTitle = "Lagos Innovates",
   logoDescription = "Landing page template built with React, Shadcn/ui and Tailwind that you can copy/paste into your project.",
   logoHref = siteConfig.url,
   introItems = [

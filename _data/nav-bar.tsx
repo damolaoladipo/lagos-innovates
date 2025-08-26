@@ -1,9 +1,5 @@
 export const Navigation = [
   {
-    label: "Home",
-    href: "/",
-  },
-  {
     label: "About Us",
     href: "/about",
     dropdown: [
@@ -66,3 +62,11 @@ export const Navigation = [
     href: "/contact",
   },
 ];
+
+
+const menuItems = [
+    { name: 'Features', href: '#link' },
+    { name: 'Solution', href: '#link' },
+    { name: 'Pricing', href: '#link' },
+    { name: 'About', href: '#link' },
+]
