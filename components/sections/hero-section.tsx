@@ -106,7 +106,7 @@ export default function HeroSection() {
                       asChild
                       size="lg"
                       variant="outline"
-                      className="flex h-10.5 flex-1 rounded-xl px-5 text-base"
+                      className="flex h-10.5 flex-1 rounded-xl  bg px-5 text-base"
                     >
                       <Link href={heroData.button1.href}>
                         <span className="flex items-center gap-3 text-nowrap">
