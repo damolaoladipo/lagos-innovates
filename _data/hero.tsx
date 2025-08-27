@@ -35,3 +35,5 @@ export const heroData = {
     text: "Meet our partners"
   }
 };
+
+

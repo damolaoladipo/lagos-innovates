@@ -1,10 +1,10 @@
-import { ButtonProps } from "@/components/ui/button";
+import { buttonVariants} from "@/components/ui/button";
 import { ReactNode } from "react";
 
 export interface IHeroButton {
   href: string;
   text: string;
-  variant?: ButtonProps["variant"];
+  variant?: typeof buttonVariants;
   icon?: ReactNode;
   iconRight?: ReactNode;
 }
