@@ -1,6 +1,8 @@
 import AboutUs from "@/components/sections/about-us";
 import HeroSection from "@/components/sections/hero-section";
-import { StatisticsSection } from "@/components/sections/statistics";
+import Programs from "@/components/sections/programs";
+import StatisticsSection  from "@/components/sections/statistics";
+
 
 
 
@@ -11,6 +13,8 @@ export default function Home() {
       <HeroSection />
       <AboutUs/>
       <StatisticsSection/>
+      <Programs/>
+      
       
       
     </main>

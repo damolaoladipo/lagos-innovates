@@ -19,7 +19,7 @@ function StatisticCard({ statistic }: StatisticCardProps) {
   )
 }
 
-export function StatisticsSection() {
+export default function StatisticsSection() {
   return (
     <section className="bg-background py-16">
       <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-12">
