@@ -1,5 +1,9 @@
+
+"use client"; 
+
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 
 
@@ -15,7 +19,7 @@ export const Logo = ({ className, uniColor }: { className?: string; uniColor?: b
     : "/blocks/lagos-innovates.png";
 
   return (
-    <img
+    <Image
       src={logoSrc}
       alt="Lagos Innoavtes"
       width={100}

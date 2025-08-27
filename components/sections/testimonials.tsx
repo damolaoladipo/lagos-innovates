@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 
 const TestimonialCard = ({ testimonial }: any) => (
-  <Card className={cn("grid grid-rows-[auto_1fr] gap-8 border-none shadow-none", testimonial.className)}>
+  <Card className={cn("grid grid-rows-[auto_1fr] gap-8 border-none shadow-none dark:bg-[#171717]", testimonial.className)}>
     {testimonial.logo && (
       <CardHeader>
         <Image

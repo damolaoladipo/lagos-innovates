@@ -17,7 +17,7 @@ export default function Programs() {
   };
 
   return (
-    <section className="bg-background text-foreground py-16 md:py-32">
+    <section className="text-foreground py-16 md:py-32 bg-white pt-20 dark:bg-[#171717]">
       <div className=" @container mx-auto max-w-5xl px-6">
         {/* Header */}
         <div className="mb-10 text-start items-start ">
