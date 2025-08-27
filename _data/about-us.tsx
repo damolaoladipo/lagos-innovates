@@ -3,8 +3,8 @@ export const AboutUsData = {
     subheading: "We support tech founders, and Startups by facilitating access to high-quality workspaces and infrastructure, learning, incubation, investor and peer networks.",
      button: {
     id: "01",
-    href: "/get-started",
-    text: "View Programs",
+    text: "Read About Us",
+    href: "/abou-us",
     variant: "default" as const,
   },
 }
