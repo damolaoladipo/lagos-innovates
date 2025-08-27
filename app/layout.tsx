@@ -2,7 +2,7 @@ import "@/app/globals.css";
 
 import type { Metadata } from "next";
 import { AppProvider } from "@/contexts/app-provider";
-import { siteConfig } from "../_data/siteConfig";
+import { siteConfig } from "../_data/site-config";
 import { useLasgFont } from "@/_data/fonts";
 
 export const metadata: Metadata = {
@@ -13,21 +13,29 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.getStartedUrl),
   description: siteConfig.description,
   keywords: [
-    "Landing page template",
-    "Components",
-    "Shadcn",
-    "Next.js",
-    "React",
-    "Tailwind CSS",
-    "Radix UI",
+    "Lagos Innovates",
+    "Lagos Innovates program",
+    "Lagos State Innovates",
+    "Lagos Innovates LSETF",
+    "Idea Hub Lagos",
+    "Lagos tech incubation",
+    "Lagos startup programs",
+    "tech innovation Lagos",
+    "early-stage ventures Lagos",
+    "Lagos startup support",
+    "12-week incubation program Lagos",
+    "technology-driven startups Lagos",
+    "innovation ecosystem Lagos State",
+    "founder guidance Lagos Innovates",
+    "tech-focused development Lagos",
   ],
   authors: [
     {
-      name: "Mikolaj Dobrucki",
-      url: "https://mikolajdobrucki.com",
+      name: "Damola Oladipo",
+      url: "https://damolaoladipo.com",
     },
   ],
-  creator: "mikolajdobrucki",
+  creator: "damolaoladipo",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -37,7 +45,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: siteConfig.ogImage,
+        url: `${siteConfig.url}/blocks/og-image.png`,
         width: 1200,
         height: 630,
         alt: siteConfig.name,
@@ -49,10 +57,10 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
-    creator: "@mikolajdobrucki",
+    creator: "@damolaoladipo",
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: "/blocks/lagos-innovates.png",
     apple: "/apple-touch-icon.png",
   },
 };

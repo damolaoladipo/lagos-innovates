@@ -4,10 +4,11 @@ import Link from "next/link";
 import * as React from "react";
 import { ReactNode } from "react";
 
-import { siteConfig } from "@/_data/siteConfig";
+import { siteConfig } from "@/_data/site-config";
 import { cn } from "@/lib/utils";
 
-import LaunchUI from "../logos/launch-ui";
+
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -17,6 +18,8 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "./navigation-menu";
+import Logo from "@/components/ui/logo";
+import { LogoIcon } from "@/components/shared/logo";
 
 interface ComponentItem {
   title: string;
@@ -98,8 +101,8 @@ export default function Navigation({
         "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
     },
   ],
-  logo = <LaunchUI />,
-  logoTitle = "Launch UI",
+  logo = <LogoIcon />,
+  logoTitle = "Lagos Innovates",
   logoDescription = "Landing page template built with React, Shadcn/ui and Tailwind that you can copy/paste into your project.",
   logoHref = siteConfig.url,
   introItems = [
