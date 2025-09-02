@@ -42,21 +42,6 @@ const TestimonialCard = ({ testimonial }: any) => (
     </CardContent>
   </Card>
 )
-const YTestimonial = {
-  youtubeId: "dQw4w9WgXcQ",
-  youtubeTitle: "Founder shares experience",
-  author: "Jane Doe",
-  title: "Founder, TechHub",
-  avatar: {
-    src: "/avatars/jane.png",
-    alt: "Jane Doe",
-    height: 400,
-    width: 400,
-    fallback: "JD",
-  },
-};
-
-
 
 const YouTubeTestimonialCard = ({ testimonial }: any) => (
   <Card
@@ -69,7 +54,7 @@ const YouTubeTestimonialCard = ({ testimonial }: any) => (
       <blockquote className="h-full flex flex-col gap-6">
         <div className="flex-1 flex flex-col">
           <iframe
-            className="w-full h-full rounded-lg"
+            className="w-full h-full rounded-lg "
             src={`https://www.youtube.com/embed/${testimonial.youtubeId}`}
             title={testimonial.youtubeTitle || "YouTube testimonial"}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -99,7 +84,7 @@ const YouTubeTestimonialCard = ({ testimonial }: any) => (
 
 export default function Testimonials() {
   return (
-    <section className="py-16">
+    <section className="py-16 mt-10 md:mt-24 -mb-28">
       <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
         {/* Header */}
         <div className="mb-10 text-start">
