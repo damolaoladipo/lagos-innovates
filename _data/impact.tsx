@@ -15,7 +15,7 @@ export interface ImpactData {
 
 export const impactData: ImpactData = {
   heading: "Our Impact",
-  subheading: "Thousands of designers and developers have already used shadcn/ui to create beautiful and functional websites and products.",
+  subheading: "Empowering talents, startups, and hubs through skills, resources, and support for sustainable growth.",
   items: [
     {
       id: "talent-development",
@@ -36,12 +36,12 @@ export const impactData: ImpactData = {
       label: "Hub Loan Programme",
       value: "250",
       suffix: "+",
-      description: "startups mentored",
+      description: "innovation hubs supported",
     },
     {
-      id: "dummy-id",
+      id: "idea-hub",
       label: "Idea Hub Programme",
-      value: "3",
+      value: "57",
       suffix: "",
       description: "startups mentored",
     },

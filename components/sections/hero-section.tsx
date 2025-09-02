@@ -101,11 +101,7 @@ export default function HeroSection() {
                         </span>
 
                         <div
-                          className="absolute inset-y-0 left-0 h-full w-full -translate-x-full transition-transform duration-300 group-hover:translate-x-0"
-                          style={{
-                            backgroundImage:
-                              "linear-gradient(to right, var(--color-green), var(--color-orange))",
-                          }}
+                         className="absolute inset-y-0 left-0 h-full w-full -translate-x-full transition-transform duration-300 group-hover:translate-x-0  bg-gradient-to-r from-[var(--color-green)] to-[var(--color-orange)]"
                         ></div>
                       </a>
                     </Button>
@@ -127,11 +123,7 @@ export default function HeroSection() {
                         </span>
 
                         <div
-                          className="absolute inset-y-0 left-0 h-full w-full -translate-x-full transition-transform duration-300 group-hover:translate-x-0"
-                          style={{
-                            backgroundImage:
-                              "linear-gradient(to right, var(--color-green), var(--color-orange))",
-                          }}
+                         className="absolute inset-y-0 left-0 h-full w-full -translate-x-full transition-transform duration-300 group-hover:translate-x-0  bg-gradient-to-r from-[var(--color-green)] to-[var(--color-orange)]"
                         ></div>
                       </a>
                     </Button>
@@ -152,7 +144,7 @@ export default function HeroSection() {
                 ...transitionVariants,
               }}
             >
-              <div className="relative mt-8 -mr-56 overflow-hidden px-2 sm:mt-12 sm:mr-0 md:mt-20">
+              <div className="relative mt-12 -mr-56 overflow-hidden px-2 sm:mt-12 sm:mr-0 md:mt-20">
                 <div
                   aria-hidden
                   className="to-background absolute inset-0 z-10 bg-linear-to-b from-transparent from-80% dark:from-35%"

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Plus, X } from "lucide-react";
+import { ArrowUpRight, Plus, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -17,20 +17,20 @@ export default function Programs() {
   };
 
   return (
-    <section className="text-foreground py-16 md:py-32 bg-white pt-20 dark:bg-[#171717]">
-      <div className=" @container mx-auto max-w-5xl px-6">
+    <section className="text-foreground bg-white py-16 pt-20 md:py-32 dark:bg-[#171717]">
+      <div className="@container mx-auto max-w-5xl px-6">
         {/* Header */}
-        <div className="mb-10 text-start items-start ">
-          <h2 className="mb-6 text-4xl font-bold text-balance md:text-5xl">
+        <div className="mb-10 items-start text-start">
+          <h2 className="mb-6 text-5xl font-medium text-balance">
             {ProgramsSection.heading}
           </h2>
-          <p className="text-muted-foreground text-lg text-pretty max-w-xl">
+          <p className="mr-12 max-w-md text-lg leading-relaxed">
             {ProgramsSection.subheading}
           </p>
         </div>
 
         {/* Components Grid */}
-        <div className="relative">
+        <div className="group relative">
           {/* Grid */}
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
             {ProgramsSection.items.map((item, index) => (
@@ -43,8 +43,9 @@ export default function Programs() {
                 {/* Card */}
                 <div
                   className={cn(
-                    "bg-card border-border relative overflow-hidden rounded-lg  transition-all duration-300",
-                    hoveredIndex === index && "border-accent bg-accent/20",
+                    "bg-card border-border relative overflow-hidden rounded-lg transition-all duration-300",
+                    hoveredIndex === index &&
+                      "border-accent bg-gradient-to-r from-[var(--color-green)] to-[var(--color-orange)]",
                   )}
                 >
                   {/* Image Container */}
@@ -61,8 +62,8 @@ export default function Programs() {
                   </div>
 
                   {/* Content */}
-                  <div className="p-4 bg-amber-100">
-                    <h3 className="text-lgfont-medium text-foreground  group-hover:text-primary flex items-center justify-between transition-colors">
+                  <div className="bg-brand/20 p-4">
+                    <h3 className="text-lgfont-medium text-foreground flex items-center justify-between transition-colors">
                       {item.title}
                       {/* Plus Icon Next to Title */}
                       <Button
@@ -72,17 +73,16 @@ export default function Programs() {
                         onClick={() => toggleOverlay(index)}
                       >
                         {overlayIndex === index ? (
-                          <X className="text-foreground h-4 w-4" />
+                          <X className="text-foreground h-4 w-4 cursor-pointer" />
                         ) : (
-                          <Plus className="text-foreground h-4 w-4" />
+                          <Plus className="text-foreground h-4 w-4 cursor-pointer" />
                         )}
                       </Button>
                     </h3>
                   </div>
 
                   {overlayIndex === index && (
-                    <div className="bg-background/95 animate-in fade-in absolute inset-0 flex flex-col justify-between p-4 duration-200">
-                      {/* Content section */}
+                    <div className="bg-background/95 absolute inset-0 z-10 flex flex-col justify-between p-4 duration-200">
                       <div className="flex flex-1 items-start justify-start pt-4">
                         <div className="text-left">
                           <h4 className="text-foreground mb-3 text-sm font-semibold">
@@ -95,18 +95,27 @@ export default function Programs() {
                       </div>
 
                       <div className="flex items-center justify-between">
-                        <Button
-                          asChild
-                          size="sm"
-                          variant="outline"
-                          className="border-border text-foreground hover:bg-foreground/10 cursor-pointer bg-transparent px-3 py-1 text-xs"
-                        >
-                          <Link href={item.cta.link}>{item.cta.label}</Link>
-                        </Button>
+                        <div className="group relative z-20 rounded-[calc(var(--radius-sm)+0.125rem)]">
+                          <Button
+                            asChild
+                            size="sm"
+                            variant="outline"
+                            className="relative flex h-10 flex-1 items-center justify-center overflow-hidden rounded-sm px-5 text-base transition-colors duration-300 hover:text-white"
+                          >
+                            <a href={item.cta.link}>
+                              <span className="relative z-20 flex items-center gap-3 text-nowrap transition-all duration-300 group-hover:translate-x-1">
+                                {item.cta.label}
+                                <ArrowUpRight className="transition-transform duration-300 group-hover:rotate-45" />
+                              </span>
+                              <div className="absolute inset-y-0  left-0 h-full w-full -translate-x-full bg-gradient-to-r from-[var(--color-green)] to-[var(--color-orange)] transition-transform duration-300 group-hover:translate-x-0"></div>
+                            </a>
+                          </Button>
+                        </div>
+
                         <Button
                           size="icon"
                           variant="ghost"
-                          className="hover:bg-foreground/10 h-6 w-6 bg-transparent"
+                          className="hover:bg-foreground/10 relative z-20 h-6 w-6 cursor-pointer bg-transparent"
                           onClick={() => toggleOverlay(index)}
                         >
                           <X className="text-foreground h-4 w-4" />

@@ -19,15 +19,16 @@ function StatisticCard({ statistic }: StatisticCardProps) {
   )
 }
 
+
 export default function StatisticsSection() {
   return (
-    <section className="bg-background py-16">
+    <section className="bg-background py-16 md:py-24">
       <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-12">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left column - Heading and description */}
           <div className="space-y-6">
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">{impactData.heading}</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mr-12">{impactData.subheading}</p>
+            <h2 className="text-5xl font-medium text-foreground leading-tight">{impactData.heading}</h2>
+            <p className="text-lg leading-relaxed mr-12">{impactData.subheading}</p>
           </div>
 
           {/* Right column - Statistics grid */}

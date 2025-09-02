@@ -76,15 +76,15 @@ export const Programs = {
 
 
 export const ProgramsSection = {
-  heading: "Our programs made for you",
-  subheading: "Hub Loans are available to operators of co-working spaces, incubators and hubs in Lagos State on very attractive terms, very attractive terms.",
+  heading: "Explore our programs",
+  subheading: "Discover initiatives and opportunities crafted to support talents, startups, and innovation hubs.",
   items: [
     {
       id: "idea-hub",
       title: "Idea Hub Programme",
       image: "/blocks/test.png",
       description:
-        "Hub Loans are available to operators of co-working spaces, incubators and hubs in Lagos State on very attractive terms: 9 percent interest for four years. Lagos Innovates recognises the vital role that co-working spaces, incubators and hubs play in the Lagos startup ecosystem. By taking a community-focused approach, and through their programs, mentorship, networks and resources, they help catalyse growth opportunities for high potential entrepreneurs and startups. Lagos Innovates is making meaningful capital available on very attractive terms to high-performing, outcome-focused workspace providers in Lagos State. The Hub Loan program is available to operators who are looking to fund expansion or improvement of their existing facilities at current sites, or to increase their number of locations.",
+        "The Lagos Innovates Idea Hub Program is a 12-week incubation program designed to support very early stage tech-enabled ventures with relevant skills, networking opportunities and mentorship from seasoned industry experts to achieve a minimum viable product; geared towards building a competitive and sustainable brand.",
       cta: {
         label: "Learn More",
         link: "programs/idea-hub",

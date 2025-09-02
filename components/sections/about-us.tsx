@@ -2,7 +2,7 @@ import { AboutUsData } from "@/_data/about-us";
 import { Button } from "@/components/ui/button";
 import { TextEffect } from "@/components/ui/text-effect";
 import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
+
 
 export default function AboutUs() {
   return (
@@ -58,11 +58,7 @@ export default function AboutUs() {
                       <ArrowUpRight className="transition-transform duration-300 group-hover:rotate-45" />
                     </span>
                     <div
-                      className="absolute inset-y-0 left-0 h-full w-full -translate-x-full transition-transform duration-300 group-hover:translate-x-0"
-                      style={{
-                        backgroundImage:
-                          "linear-gradient(to right, var(--color-green), var(--color-orange))",
-                      }}
+                      className="absolute inset-y-0 left-0 h-full w-full -translate-x-full transition-transform duration-300 group-hover:translate-x-0  bg-gradient-to-r from-[var(--color-green)] to-[var(--color-orange)]"
                     ></div>
                   </a>
                 </Button>
