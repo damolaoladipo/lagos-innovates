@@ -1,40 +1,61 @@
 import { footerData } from "@/_data/footer";
 import { Logo } from "@/components/shared/logo";
+import Link from "next/link";
 
 export default function Footer() {
   const { brand, socialLinks, programs, about } = footerData;
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className=" bg-white dark:bg-transparent ">
-      <div className=" mx-auto max-w-5xl w-full relative px-6 py-12 mt-36 pt-8 ">
-        <div className="flex mt-6 mb-80 flex-col md:flex-row md:flex-wrap lg:flex-row lg:justify-between gap-10 lg:gap-24">
+    <footer className="bg-white dark:bg-transparent">
+      <div className="relative mx-auto mt-36 w-full max-w-5xl px-6 py-12 pt-8">
+        <div className="mt-10 border-b md:mb-12">
+          <div className="mx-auto flex max-w-5xl flex-wrap items-end justify-between gap-6 px-6 pb-6">
+            <div className="flex items-center space-x-2">
+              <Link href="/" aria-label="go home" className="block size-fit">
+                <Logo />
+              </Link>
+            </div>
+            <div className="flex flex-wrap justify-center gap-6 text-sm">
+              {socialLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={link.label}
+                  className="text-muted-foreground hover:text-primary block"
+                >
+                  <link.icon className="size-6" />
+                </Link>
+              ))}
+            
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-80 flex flex-col md:flex-row md:flex-wrap lg:flex-row lg:justify-between">
           {/* Brand Section */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <Logo/>
-            </div>
-            <p className="text-sm text-muted-foreground hover:text-primary block leading-relaxed max-w-sm">{brand.bio}</p>
+            <p className="text-foregroundblock max-w-sm text-sm leading-relaxed">
+              {brand.bio}
+            </p>
+
             {/* Social Links */}
-            <div className="flex space-x-3">
-              {socialLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.href}
-                  className="w-9 h-9 text-muted-foreground hover:bg-[#a3f443] dark:hover:bg-[#a3f443] rounded-lg flex items-center justify-center transition-colors"
-                  aria-label={link.label}
-                >
-                  <link.icon className="w-4 h-4" />
-                </a>
-              ))}
+            <div className="text-foreground  block max-w-sm text-sm leading-relaxed">
+              <div>
+                <p>{brand.address}</p>
+                <p>{brand.telephone}</p>
+                <p>{brand.email}</p>
+              </div>
             </div>
           </div>
 
           {/* Wrapped the last two sections in a new flex div */}
-          <div className="flex flex-col md:flex-row gap-10 lg:gap-24">
+          <div className="flex flex-col gap-10 md:flex-row lg:gap-24">
             {/* MadeByDamola Section */}
             <div className="space-y-4">
-              <h3 className=" font-semibold">{programs.group}</h3>
+              <h3 className="font-semibold">{programs.group}</h3>
               <ul className="space-y-3">
                 {programs.items.map((item, index) => (
                   <li key={index}>
@@ -42,7 +63,7 @@ export default function Footer() {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-neutral-400 hover:text-[#a3f443] transition-colors"
+                      className="text-sm text-neutral-400 transition-colors hover:text-[#a3f443]"
                     >
                       {item.label}
                     </a>
@@ -59,7 +80,7 @@ export default function Footer() {
                   <li key={index}>
                     <a
                       href={item.href}
-                      className="text-sm hover:text-[#a3f443] transition-colors"
+                      className="text-sm transition-colors hover:text-[#a3f443]"
                     >
                       {item.label}
                     </a>
@@ -70,19 +91,15 @@ export default function Footer() {
           </div>
         </div>
 
-
-        <div className="flex flex-col items-start justify-between gap-6 sm:flex-row mt-10 md:mt32 border-t border-neutral-800 pt-8">
+        <div className="md:mt32 mt-10 flex flex-col items-start justify-between gap-6 border-t border-neutral-800 pt-8 sm:flex-row">
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-neutral-800 dark:text-neutral-200">
-            <p className="text-sm ">
-              {" "}
-              {brand.buitBy}
-            </p>
+            <p className="text-sm"> {brand.buitBy}</p>
           </div>
           <p className="text-sm">
             &copy; {currentYear}{" "}
             <a
               href="https://github.com/damolaoladipo"
-              className=" hover:text-[#a3f443] transition-colors"
+              className="transition-colors hover:text-[#a3f443]"
             >
               {brand.ownedBy}
             </a>

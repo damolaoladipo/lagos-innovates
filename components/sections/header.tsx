@@ -8,6 +8,7 @@ import { useScroll } from "motion/react";
 import { Logo } from "@/components/shared/logo";
 import { Navigation } from "@/_data/nav-bar";
 import ThemeToggle from "@/components/shared/theme-toggle";
+import { heroData } from "@/_data/hero";
 
 export const HeroHeader = () => {
   const [menuState, setMenuState] = React.useState(false);
@@ -27,11 +28,11 @@ export const HeroHeader = () => {
       <nav
         data-state={menuState && "active"}
         className={cn(
-          "fixed z-20 w-full border-b transition-colors duration-150",
+          "fixed z-20 w-full transition-colors duration-150",
           scrolled && "bg-background/50 backdrop-blur-3xl",
         )}
       >
-        <div className="mx-auto max-w-5xl px-6 transition-all duration-300 items-center justify-center">
+        <div className="mx-auto max-w-5xl items-center justify-center px-6 transition-all duration-300">
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
             <div className="flex w-full items-center justify-between gap-12 lg:w-auto">
               <Link
@@ -74,7 +75,7 @@ export const HeroHeader = () => {
                     <li key={index}>
                       <Link
                         href={item.href}
-                        className="text-muted-foreground hover:text-accent-foreground block duration-150"
+                        className="text-foreground hover:text-accent-foreground block duration-150"
                       >
                         <span>{item.label}</span>
                       </Link>
@@ -85,13 +86,19 @@ export const HeroHeader = () => {
                   <ThemeToggle />
                 </div>
               </div>
-              <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit items-center justify-center">
+              <div className="flex w-full flex-col items-center justify-center space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                 <ThemeToggle />
-                <Button asChild size="lg" className="rounded-xl ext-base">
-                  <Link href="#">
-                    <span>Sign Up</span>
-                  </Link>
-                </Button>
+  
+
+                {/* <div className="bg-foreground/10 flex flex-1 rounded-[calc(var(--radius-sm)+0.125rem)] border p-0.5">
+                  <Button asChild size="lg" className="rounded-sm text-base hover:bg-accent  hover:text-accent-foreground">
+                    <Link href={heroData.button1.href}>
+                      <span className="text-nowrap">
+                        {heroData.button1.text}
+                      </span>
+                    </Link>
+                  </Button>
+                </div> */}
               </div>
             </div>
           </div>

@@ -43,7 +43,7 @@ export default function Programs() {
                 {/* Card */}
                 <div
                   className={cn(
-                    "bg-card border-border relative overflow-hidden rounded-lg border transition-all duration-300",
+                    "bg-card border-border relative overflow-hidden rounded-lg  transition-all duration-300",
                     hoveredIndex === index && "border-accent bg-accent/20",
                   )}
                 >
@@ -61,8 +61,8 @@ export default function Programs() {
                   </div>
 
                   {/* Content */}
-                  <div className="p-4">
-                    <h3 className="text-lgfont-medium text-foreground group-hover:text-primary flex items-center justify-between transition-colors">
+                  <div className="p-4 bg-amber-100">
+                    <h3 className="text-lgfont-medium text-foreground  group-hover:text-primary flex items-center justify-between transition-colors">
                       {item.title}
                       {/* Plus Icon Next to Title */}
                       <Button

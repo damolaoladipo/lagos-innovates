@@ -1,12 +1,12 @@
-import { InstagramIcon, LinkedInIcon, XIcon } from "@/components/shared/social-icons";
+import { InstagramIcon, LinkedInIcon, XIcon, YouTubeIcon } from "@/components/shared/social-icons";
 
 export const footerData = {
   brand: {
     name: "Lagos Innovates",
     bio: "Lagos Innovates is an initiative of the Lagos State Employment Trust Fund (LSETF).",
-    address: "16 Billings Way, Oregun, Ikeja Lagos, Nigeria",
-    telephone: "+234 (0) 1 700 0945",
-    email: "lagosinnovates@lsetf.ng",
+    address: "Address: 16 Billings Way, Oregun, Ikeja Lagos, Nigeria",
+    telephone: "Telephone: +234 (0) 1 700 0945",
+    email: "Email: lagosinnovates@lsetf.ng",
     buitBy: "Made with ❤️ by Damola",
     copyright: ". All rights reserved.",
     ownedBy: "Lagos Innovates",
@@ -16,6 +16,11 @@ export const footerData = {
       href: "https://www.instagram.com/lagosinnovates",
       label: "Instagram",
       icon: InstagramIcon,
+    },
+    {
+      href: "https://www.youtube.com/lsetf",
+      label: "YouTube",
+      icon: YouTubeIcon,
     },
     {
       href: "https://www.linkedin.com/company/lagos-innovates",

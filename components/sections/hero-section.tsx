@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ChevronRight } from "lucide-react";
+import { ArrowUpRight, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { TextEffect } from "@/components/ui/text-effect";
@@ -81,38 +81,58 @@ export default function HeroSection() {
                     },
                     ...transitionVariants,
                   }}
-                  className="mt-12 flex items-center gap-2"
+                  className="mt-8 flex items-center gap-2"
                 >
                   <div
                     key={heroData.button1.id}
-                    className="bg-foreground/10 flex flex-1 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5"
+                    className="group flex flex-1 rounded-[calc(var(--radius-sm)+0.125rem)]"
                   >
                     <Button
                       asChild
                       size="lg"
-                      className="rounded-xl px-5 text-base"
+                      className="relative flex h-11 flex-1 items-center justify-center overflow-hidden rounded-sm px-5 text-base transition-colors duration-300 hover:text-white"
                     >
-                      <Link href={heroData.button1.href}>
-                        <span className="text-nowrap">
+                      <a href={heroData.button1.href}>
+                        <span className="relative z-10 flex items-center gap-3 text-nowrap transition-all duration-300 group-hover:translate-x-1">
                           {heroData.button1.text}
+
+                          <ArrowUpRight className="transition-transform duration-300 group-hover:rotate-45" />
                         </span>
-                      </Link>
+
+                        <div
+                          className="absolute inset-y-0 left-0 h-full w-full -translate-x-full transition-transform duration-300 group-hover:translate-x-0"
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(to right, var(--color-green), var(--color-orange))",
+                          }}
+                        ></div>
+                      </a>
                     </Button>
                   </div>
 
-                  <div className="bg-foreground/10 flex flex-1 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5">
+                  <div className="group flex flex-1 rounded-[calc(var(--radius-sm)+0.125rem)]">
                     <Button
                       key={heroData.button1.id}
                       asChild
                       size="lg"
                       variant="outline"
-                      className="flex h-10.5 flex-1 rounded-xl  bg px-5 text-base"
+                      className="bg-background relative flex h-11 flex-1 items-center justify-center overflow-hidden rounded-sm px-5 text-base transition-colors duration-300 hover:text-white"
                     >
-                      <Link href={heroData.button1.href}>
-                        <span className="flex items-center gap-3 text-nowrap">
-                          {heroData.button2.text} <ChevronRight />
+                      <a href={heroData.button1.href}>
+                        <span className="relative z-10 flex items-center gap-3 text-nowrap transition-all duration-300 group-hover:translate-x-1">
+                          {heroData.button2.text}
+
+                          <ArrowUpRight className="transition-transform duration-300 group-hover:rotate-45" />
                         </span>
-                      </Link>
+
+                        <div
+                          className="absolute inset-y-0 left-0 h-full w-full -translate-x-full transition-transform duration-300 group-hover:translate-x-0"
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(to right, var(--color-green), var(--color-orange))",
+                          }}
+                        ></div>
+                      </a>
                     </Button>
                   </div>
                 </AnimatedGroup>
@@ -134,7 +154,7 @@ export default function HeroSection() {
               <div className="relative mt-8 -mr-56 overflow-hidden px-2 sm:mt-12 sm:mr-0 md:mt-20">
                 <div
                   aria-hidden
-                  className="to-background absolute inset-0 z-10 bg-linear-to-b from-transparent from-35%"
+                  className="to-background absolute inset-0 z-10 bg-linear-to-b from-transparent from-80% dark:from-35%"
                 />
                 <div className="ring-background bg-background relative mx-auto max-w-5xl overflow-hidden rounded-2xl border p-4 shadow-lg ring-1 inset-shadow-2xs shadow-zinc-950/15 dark:inset-shadow-white/20">
                   <Image
@@ -145,7 +165,7 @@ export default function HeroSection() {
                     height={heroData.mockup.dark.height}
                   />
                   <Image
-                    className="border-border/25 relative z-2 aspect-15/8 rounded-2xl border dark:hidden"
+                    className="border-border/25 relative z-2 aspect-15/8 rounded-2xl dark:hidden"
                     src={heroData.mockup.light.src}
                     alt={heroData.mockup.light.alt}
                     width={heroData.mockup.light.width}
@@ -170,77 +190,77 @@ export default function HeroSection() {
             </div>
             <div className="mx-auto mt-12 grid max-w-2xl grid-cols-4 gap-x-12 gap-y-8 transition-all duration-500 group-hover:opacity-50 group-hover:blur-xs sm:gap-x-16 sm:gap-y-14">
               <div className="flex">
-                <img
+                <Image
                   className="mx-auto h-10 w-fit dark:invert"
                   src="/partners/pwc.svg"
                   alt="PWC Logo"
-                  height="auto"
-                  width="auto"
+                  height="16"
+                  width="16"
                 />
               </div>
 
               <div className="flex">
-                <img
+                <Image
                   className="mx-auto h-10 w-fit dark:invert"
                   src="/partners/honeywell.svg"
                   alt="Honeywell Logo"
-                  height="auto"
-                  width="auto"
+                  height="16"
+                  width="16"
                 />
               </div>
               <div className="flex">
-                <img
+                <Image
                   className="mx-auto h-10 w-fit dark:invert"
                   src="/partners/gomycode.svg"
                   alt="Gomycode Logo"
                   height="16"
-                  width="auto"
+                  width="16"
                 />
               </div>
               <div className="flex">
-                <img
+                <Image
                   className="mx-auto h-10 w-fit dark:invert"
                   src="/partners/leadspace.svg"
                   alt="Leadspace logo"
-                  height="auto"
-                  width="auto"
+                  height="16"
+                  width="16"
                 />
               </div>
               <div className="flex">
-                <img
+                <Image
                   className="mx-auto h-10 w-fit dark:invert"
-                    src="/partners/workstation.svg"
+                  src="/partners/workstation.svg"
                   alt="Workstation logo"
-                  height="auto"
-                  width="auto"
+                  height="16"
+                  width="16"
                 />
               </div>
               <div className="flex">
-                <img
+                <Image
                   className="mx-auto h-10 w-fit dark:invert"
                   src="/partners/dsn.svg"
                   alt="Data Science Nigeria Logo"
-                  height="auto"
-                  width="auto"
+                  height="16"
+                  width="16"
                 />
               </div>
               <div className="flex">
-                <img
+                <Image
                   className="mx-auto h-10 w-fit dark:invert"
                   src="/partners/itanna.svg"
                   alt="Itanna Logo"
-                 height="auto"
-                  width="auto"
+                  height="16"
+                  width="16"
                 />
               </div>
 
               <div className="flex">
-                <img
+                <Image
                   className="mx-auto h-10 w-fit dark:invert"
                   src="/partners/mindthegap.svg"
                   alt="Mind the gap Logo"
-                  height="auto"
-                  width="auto"
+                  height="16"
+                  width="16"
                 />
               </div>
             </div>
