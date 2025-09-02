@@ -5,13 +5,14 @@ export const heroData = {
 
   mockup: {
     light: {
-      src: "/blocks/og-image.png",
+      src: "/images/hero-image.png",
       alt: "innovation image",
       width: 1248,
       height: 765,
+
     },
     dark: {
-      src: "/blocks/og-image.png",
+      src: "/images/hero-image.png",
       alt: "innovation image",
       width: 1248,
       height: 765,

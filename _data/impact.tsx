@@ -1,22 +1,48 @@
-export const impactData = {
-  title: "Our Impact",
+export interface ImpactItem {
+  id: string;
+  label: string;
+  value: string;   
+  suffix?: string;
+  description: string;
+}
+
+export interface ImpactData {
+  heading: string;
+  subheading: string
+  items: ImpactItem[];
+}
+
+
+export const impactData: ImpactData = {
+  heading: "Our Impact",
+  subheading: "Empowering talents, startups, and hubs through skills, resources, and support for sustainable growth.",
   items: [
     {
+      id: "talent-development",
       label: "Talent Development",
-      stat: "146",
-      suffix: "k",
+      value: "4500",
+      suffix: "+",
       description: "individuals supported with tech-based upskilling",
     },
     {
+      id: "workspace-voucher",
       label: "Workspace Voucher",
-      stat: "287",
-      suffix: "k",
+      value: "700",
+      suffix: "+",
       description: "startups supported with vouchers worth ₦167 million",
     },
     {
+      id: "hub-loan",
+      label: "Hub Loan Programme",
+      value: "250",
+      suffix: "+",
+      description: "innovation hubs supported",
+    },
+    {
+      id: "idea-hub",
       label: "Idea Hub Programme",
-      stat: "93",
-      suffix: "k",
+      value: "57",
+      suffix: "",
       description: "startups mentored",
     },
   ],

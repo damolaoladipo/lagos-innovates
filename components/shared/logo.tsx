@@ -1,5 +1,9 @@
+
+"use client"; 
+
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 
 
@@ -9,18 +13,18 @@ export const Logo = ({ className, uniColor }: { className?: string; uniColor?: b
 
   // if uniColor is true, always use a single-color logo regardless of theme
   const logoSrc = uniColor
-    ? "/blocks/lagos-innovates.png"
+    ? "/blocks/lagos-innovates-logo.svg"
     : resolvedTheme === "dark"
-    ? "/blocks/lagos-innovates.png"
-    : "/blocks/lagos-innovates.png";
+    ? "/blocks/lagos-innovates-logo.svg"
+    : "/blocks/lagos-innovates-logo.svg"
 
   return (
-    <img
+    <Image
       src={logoSrc}
       alt="Lagos Innoavtes"
-      width={100}
-      height={100}
-      className={className}
+      width={120}
+      height={120}
+      className="dark:invert"
     />
   );
 };

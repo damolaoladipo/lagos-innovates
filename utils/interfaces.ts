@@ -19,15 +19,33 @@ export interface IHero {
 }
 
 export interface ITestimonials {
-  title: string;
+  heading: string;
+  subheading: string
   items: ITestimonial[];
 }
 
-export interface ITestimonial {
-  id: string
-  quote?: string
-  author?: string
-  role?: string
-  description?: string
-  videoUrl?: string
-}
+export type ITestimonial = {
+  id: number;
+  type: "youtube" | "quote";
+  // For YouTube type
+  youtubeId?: string;
+  youtubeTitle?: string;
+  // For Quote type
+  quote?: string;
+  logo?: string;
+  logoAlt?: string;
+  logoWidth?: number;
+  logoHeight?: number;
+  // Shared fields
+  avatar: {
+    src: string;
+    alt: string;
+    fallback: string;
+    width: number;
+    height: number;
+  };
+  author: string;
+  title: string;
+  className?: string;
+};
+

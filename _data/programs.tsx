@@ -73,3 +73,55 @@ export const Programs = {
     },
   ],
 };
+
+
+export const ProgramsSection = {
+  heading: "Explore our programs",
+  subheading: "Discover initiatives and opportunities crafted to support talents, startups, and innovation hubs.",
+  items: [
+    {
+      id: "idea-hub",
+      title: "Idea Hub Programme",
+      image: "/blocks/idea-hub.png",
+      description:
+        "The Lagos Innovates Idea Hub Program is a 12-week incubation program designed to support very early stage tech-enabled ventures with relevant skills, networking opportunities and mentorship from seasoned industry experts to achieve a minimum viable product; geared towards building a competitive and sustainable brand.",
+      cta: {
+        label: "Learn More",
+        link: "programs/idea-hub",
+      },
+    },
+    {
+      id: "talent-development",
+      title: "Talent Development Programme",
+      image: "/images/about.png",
+      description:
+        "The Talent Development Programme enables aspiring and existing tech professionals to upskill by granting them access to courses through a student loan program. Lagos Innovates, in partnership with Honeywell Group, is supporting capacity development to build a formidable tech talent pipeline and improve the investability of startups in Lagos. The program funds up to 80% of the cost of attendance for high-potential individuals such as founders, developers, or startup employees active in the Lagos ecosystem.",
+      cta: {
+        label: "Apply now",
+        link: "/programs/talent",
+      },
+    },
+    {   
+      id: "workspace-voucher",
+      title: "Workspace Vouchers",
+      image: "/blocks/workspace.png",
+      description:
+        "Workspace Vouchers offer high-potential new founders and teams a significant discount on membership costs at Lagos Innovates’ Partner Hubs. The vouchers support very early-stage ventures by facilitating access to affordable, well-equipped workspaces. Lagos Innovates covers 30% to 75% of membership costs for 3 to 12 months, depending on stage. Applications are competitive and merit-based.",
+      cta: {
+        label: "Apply now",
+        link: "/programs/workspace-vouchers",
+      },
+    },
+        {
+      id: "hub-loans",
+      title: "Hub Loans Programme",
+      image: "/blocks/hub.png",
+      description:
+        "Hub Loans are available to operators of co-working spaces, incubators and hubs in Lagos State on very attractive terms: 9 percent interest for four years. Lagos Innovates recognises the vital role that co-working spaces, incubators and hubs play in the Lagos startup ecosystem. By taking a community-focused approach, and through their programs, mentorship, networks and resources, they help catalyse growth opportunities for high potential entrepreneurs and startups. Lagos Innovates is making meaningful capital available on very attractive terms to high-performing, outcome-focused workspace providers in Lagos State. The Hub Loan program is available to operators who are looking to fund expansion or improvement of their existing facilities at current sites, or to increase their number of locations.",
+      cta: {
+        label: "Apply now",
+        link: "/programs/hub-loans",
+      },
+    },
+  ],
+};
