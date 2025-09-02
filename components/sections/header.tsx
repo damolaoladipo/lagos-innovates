@@ -8,7 +8,7 @@ import { useScroll } from "motion/react";
 import { Logo } from "@/components/shared/logo";
 import { Navigation } from "@/_data/nav-bar";
 import ThemeToggle from "@/components/shared/theme-toggle";
-import { heroData } from "@/_data/hero";
+
 
 export const HeroHeader = () => {
   const [menuState, setMenuState] = React.useState(false);
@@ -38,19 +38,24 @@ export const HeroHeader = () => {
               <Link
                 href="/"
                 aria-label="home"
-                className="flex items-center space-x-2"
+                className="flex"
               >
                 <Logo />
               </Link>
+
+              
+              <div className="flex items-center space-x-2 lg:hidden">
+                <ThemeToggle  className="relative z-20 block cursor-pointer " />
 
               <button
                 onClick={() => setMenuState(!menuState)}
                 aria-label={menuState == true ? "Close Menu" : "Open Menu"}
                 className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
               >
-                <Menu className="m-auto size-6 duration-200 in-data-[state=active]:scale-0 in-data-[state=active]:rotate-180 in-data-[state=active]:opacity-0" />
-                <X className="absolute inset-0 m-auto size-6 scale-0 -rotate-180 opacity-0 duration-200 in-data-[state=active]:scale-100 in-data-[state=active]:rotate-0 in-data-[state=active]:opacity-100" />
+                <Menu className="m-auto size-8 duration-200 in-data-[state=active]:scale-0 in-data-[state=active]:rotate-180 in-data-[state=active]:opacity-0" />
+                <X className="absolute inset-0 m-auto size-8 scale-0 -rotate-180 opacity-0 duration-200 in-data-[state=active]:scale-100 in-data-[state=active]:rotate-0 in-data-[state=active]:opacity-100" />
               </button>
+              </div>
 
               <div className="hidden lg:block">
                 <ul className="flex gap-8 text-sm">
@@ -58,7 +63,7 @@ export const HeroHeader = () => {
                     <li key={index}>
                       <Link
                         href={item.href}
-                        className="text-muted-foreground hover:text-accent-foreground block duration-150"
+                        className="font-normal hover:text-brand block duration-150"
                       >
                         <span>{item.label}</span>
                       </Link>
@@ -82,23 +87,9 @@ export const HeroHeader = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-6 flex justify-center">
-                  <ThemeToggle />
-                </div>
               </div>
-              <div className="flex w-full flex-col items-center justify-center space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
+              <div className=" w-full hidden md:block flex-col items-center justify-center space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                 <ThemeToggle />
-  
-
-                {/* <div className="bg-foreground/10 flex flex-1 rounded-[calc(var(--radius-sm)+0.125rem)] border p-0.5">
-                  <Button asChild size="lg" className="rounded-sm text-base hover:bg-accent  hover:text-accent-foreground">
-                    <Link href={heroData.button1.href}>
-                      <span className="text-nowrap">
-                        {heroData.button1.text}
-                      </span>
-                    </Link>
-                  </Button>
-                </div> */}
               </div>
             </div>
           </div>
