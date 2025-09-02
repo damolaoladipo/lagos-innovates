@@ -21,7 +21,7 @@ export default function Programs() {
       <div className="@container mx-auto max-w-5xl px-6">
         {/* Header */}
         <div className="mb-10 items-start text-start">
-          <h2 className="mb-6 text-5xl font-medium text-balance">
+          <h2 className="mb-6 text-4xl md:text-5xl mr-6 font-medium text-balance">
             {ProgramsSection.heading}
           </h2>
           <p className="mr-12 max-w-md text-lg leading-relaxed">

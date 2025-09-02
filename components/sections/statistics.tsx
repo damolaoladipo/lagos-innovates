@@ -27,7 +27,7 @@ export default function StatisticsSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left column - Heading and description */}
           <div className="space-y-6">
-            <h2 className="text-5xl font-medium text-foreground leading-tight">{impactData.heading}</h2>
+            <h2 className="text-4xl md:text-5xl font-medium leading-tight">{impactData.heading}</h2>
             <p className="text-lg leading-relaxed mr-12">{impactData.subheading}</p>
           </div>
 

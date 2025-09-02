@@ -25,7 +25,7 @@ export default function AboutUs() {
               preset="fade-in-blur"
               speedSegment={0.3}
               as="h1"
-              className="mt-6 max-w-2xl text-5xl font-medium text-left"
+              className="mt-6 max-w-2xl text-4xl md:text-5xl font-medium text-left"
             >
               {AboutUsData.heading}
             </TextEffect>
