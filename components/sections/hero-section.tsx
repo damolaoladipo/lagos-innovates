@@ -48,13 +48,14 @@ export default function HeroSection() {
         <section>
           <div className="relative pt-24">
             <div className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--color-background)_75%)]"></div>
+       
             <div className="mx-auto max-w-5xl px-6">
-              <div className="sm:mx-auto lg:mt-0 lg:mr-auto">
+              <div className="sm:mx-auto lg:mt-0 lg:mr-auto text-left">
                 <TextEffect
                   preset="fade-in-blur"
                   speedSegment={0.3}
                   as="h1"
-                  className="mt-8 max-w-2xl text-5xl font-medium text-balance md:text-6xl lg:mt-16"
+                  className="mt-8 max-w-2xl text-5xl font-medium text-left md:text-6xl lg:mt-16"
                 >
                   {heroData.heading}
                 </TextEffect>
@@ -188,14 +189,14 @@ export default function HeroSection() {
                 <ChevronRight className="ml-1 inline-block size-3" />
               </Link>
             </div>
-            <div className="mx-auto mt-12 grid max-w-2xl grid-cols-4 gap-x-12 gap-y-8 transition-all duration-500 group-hover:opacity-50 group-hover:blur-xs sm:gap-x-16 sm:gap-y-14">
+            <div className="mx-auto mt-12 grid max-w-2xl grid-cols-4 gap-x-4 gap-y-8 transition-all duration-500 group-hover:opacity-50 group-hover:blur-xs sm:gap-x-16 sm:gap-y-14">
               <div className="flex">
                 <Image
-                  className="mx-auto h-10 w-fit dark:invert"
+                  className="mx-auto h-10 md:h-10 w-fit dark:invert"
                   src="/partners/pwc.svg"
                   alt="PWC Logo"
-                  height="16"
-                  width="16"
+                  height="24"
+                  width="24"
                 />
               </div>
 
