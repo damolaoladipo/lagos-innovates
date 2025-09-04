@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import React from "react";
 import { cn } from "@/lib/utils";
 import { useScroll } from "motion/react";
@@ -10,7 +9,7 @@ import { Navigation } from "@/_data/nav-bar";
 import ThemeToggle from "@/components/shared/theme-toggle";
 
 
-export const HeroHeader = () => {
+export const Header = () => {
   const [menuState, setMenuState] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
 

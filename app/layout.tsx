@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import { AppProvider } from "@/contexts/app-provider";
 import { siteConfig } from "../_data/site-config";
 import { useLasgFont } from "@/_data/fonts";
+import { Header } from "@/components/sections/header";
+import Footer from "@/components/sections/footer";
 
 export const metadata: Metadata = {
   title: {
@@ -75,8 +77,10 @@ export default function RootLayout({
       <body className={`${useLasgFont.variable} bg-background antialiased`}>
         <AppProvider>
           <main className="text-foreground min-h-screen w-full overflow-hidden">
+            <Header />
             {children}
           </main>
+          <Footer/>
         </AppProvider>
       </body>
     </html>

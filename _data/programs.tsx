@@ -1,224 +1,268 @@
-
 // @/_data/programs.ts
 export interface Feature {
-  id: string
-  title: string
-  description: string
-  icon: string // we’ll map this to lucide icons dynamically
+  id: string;
+  title: string;
+  description: string;
+  icon: string; // we’ll map this to lucide icons dynamically
 }
 
 export interface Program {
-  id: string
-  heading: string
-  subheading: string
+  id: string;
+  heading: string;
+  subheading: string;
   image: {
-    src: string
-    alt: string
-    width?: number
-    height?: number
-  }
-  button: {
-    text: string
-    href: string
-    variant: "default" | "outline" | "secondary"
-  }
-  features: Feature[]
+    src: string;
+    alt: string;
+    width?: number;
+    height?: number;
+  };
+  button1: {
+    id: string;
+    text: string;
+    href: string;
+    variant: "default" | "outline" | "secondary" | "glow";
+  };
+  button2?: {
+    id: string;
+    text: string;
+    href: string;
+    variant: "default" | "outline" | "secondary" | "glow";
+    icon?: string;
+  };
+
+  features: Feature[];
 }
 
 export const ProgramsData: Program[] = [
   {
     id: "idea-hub",
-    heading: "Incubation Program",
+    heading: "Idea Hub Program",
     subheading:
-      "Business incubation and coaching by Lagos Innovates experienced mentors.",
+      "The Lagos Innovates Idea Hub Program is a 12-week incubation program designed to support very early stage tech-enabled ventures with relevant skills, networking opportunities and mentorship from seasoned industry experts to achieve a minimum viable product; geared towards building a competitive and sustainable brand.",
     image: {
-      src: "https://images.unsplash.com/photo-1616587226960-4a03badbe8bf?q=80",
-      alt: "Incubation team",
+      src: "/blocks/hub.png",
+      alt: "Idea hub",
+      height: 1400,
+      width: 1400,
     },
-    button: {
-      text: "Learn More",
-      href: "/apply",
-      variant: "default",
+    button1: {
+      id: "01",
+      href: "/apply-now",
+      text: "Apply Now",
+      variant: "default" as const,
+    },
+    button2: {
+      id: "02",
+      href: "/download",
+      text: "Download Guide",
+      variant: "glow" as const,
+      icon: "Arrow",
     },
     features: [
       {
-        id: "fast",
-        title: "Fast",
+        id: "mentorship",
+        title: "Mentorship",
         description:
-          "Business incubation and coaching by experienced and seasoned mentors.",
-        icon: "Zap",
+          "Business incubation and coaching from Lagos Innovates’ experienced and seasoned mentors.",
+        icon: "Lightbulb",
       },
       {
-        id: "powerful",
-        title: "Powerful",
+        id: "network",
+        title: "Network",
         description:
-          "Access to Lagos Innovates network including Government, Corporates, Startups, Investors, etc.",
-        icon: "Cpu",
+          "Access to Lagos Innovates’ strong ecosystem of government, corporates, startups, and investors.",
+        icon: "Network",
       },
       {
-        id: "secure",
-        title: "Security",
+        id: "services",
+        title: "Services",
         description:
-          "Access to administrative services such as legal, accounting, HR, etc.",
-        icon: "Lock",
+          "Administrative support including legal, accounting, human resources, and more.",
+        icon: "Briefcase",
       },
       {
-        id: "ai",
-        title: "AI Powered",
+        id: "funding",
+        title: "Funding",
         description:
-          "An opportunity to pitch for Workspace Vouchers for 6 or 12 months.",
-        icon: "Sparkles",
+          "An opportunity to pitch for Lagos Innovates Workspace Vouchers for 6 or 12 months (valued between ₦120,000 – ₦1,800,000).",
+        icon: "CreditCard",
       },
     ],
   },
-   {
+  {
     id: "talent-development",
-    heading: "Incubation Program",
+    heading: "Talent Development Programme",
     subheading:
-      "Business incubation and coaching by Lagos Innovates experienced mentors.",
+      "The Talent Development Programme enables aspiring and existing tech professionals to upskill by granting them access to courses through a student loan program. Lagos Innovates, in partnership with Honeywell Group, is supporting capacity development to build a formidable tech talent pipeline and improve the investability of startups in Lagos. The program funds up to 80% of the cost of attendance for high-potential individuals such as founders, developers, or startup employees active in the Lagos ecosystem.",
     image: {
-      src: "https://images.unsplash.com/photo-1616587226960-4a03badbe8bf?q=80",
-      alt: "Incubation team",
+      src: "/blocks/hub.png",
+      alt: "Idea hub",
+      height: 1400,
+      width: 1400,
     },
-    button: {
-      text: "Learn More",
-      href: "/apply",
-      variant: "default",
+
+    button1: {
+      id: "01",
+      href: "/apply-now",
+      text: "Apply Now",
+      variant: "default" as const,
+    },
+    button2: {
+      id: "02",
+      href: "/download",
+      text: "Download Guide",
+      variant: "glow" as const,
+      icon: "Arrow",
     },
     features: [
       {
-        id: "fast",
-        title: "Fast",
+        id: "access",
+        title: "Access",
         description:
-          "Business incubation and coaching by experienced and seasoned mentors.",
-        icon: "Zap",
+          "Covers up to 80% of course fees through the student loan program, making quality training affordable for aspiring tech talent.",
+        icon: "BookOpen",
       },
       {
-        id: "powerful",
-        title: "Powerful",
+        id: "upskill",
+        title: "Upskill",
         description:
-          "Access to Lagos Innovates network including Government, Corporates, Startups, Investors, etc.",
-        icon: "Cpu",
+          "Supports Lagos residents in gaining in-demand technology skills that improve employability and career growth.",
+        icon: "GraduationCap",
       },
       {
-        id: "secure",
-        title: "Security",
+        id: "support",
+        title: "Support",
         description:
-          "Access to administrative services such as legal, accounting, HR, etc.",
-        icon: "Lock",
+          "Backed by Lagos Innovates in partnership with Honeywell Group to build a formidable talent pipeline for the ecosystem.",
+        icon: "Handshake",
       },
       {
-        id: "ai",
-        title: "AI Powered",
+        id: "impact",
+        title: "Impact",
         description:
-          "An opportunity to pitch for Workspace Vouchers for 6 or 12 months.",
-        icon: "Sparkles",
+          "Focused on high-potential individuals such as founders, developers, and startup employees who can strengthen the Lagos tech ecosystem.",
+        icon: "Users",
       },
     ],
   },
-   {
+  {
     id: "workspace-voucher",
-    heading: "Incubation Program",
+    heading: "Workspace Vouchers",
     subheading:
-      "Business incubation and coaching by Lagos Innovates experienced mentors.",
+      "Workspace Vouchers offer high-potential new founders and teams a significant discount on membership costs at Lagos Innovates’ Partner Hubs. The vouchers support very early-stage ventures by facilitating access to affordable, well-equipped workspaces. Lagos Innovates covers 30% to 75% of membership costs for 3 to 12 months, depending on stage. Applications are judged on merit, provided they meet the eligibility criteria. A panel of judges evaluates each venture based on market opportunity, team strength, traction or progress, and third-party recommendations. Scoring is out of 100 points, with a minimum of 50 points required, and vouchers are awarded to the highest-scoring ventures until they are fully allocated. While third-party recommendations from founders, investors, or hub operators are not mandatory, they can strengthen an application and improve its score.",
     image: {
-      src: "https://images.unsplash.com/photo-1616587226960-4a03badbe8bf?q=80",
-      alt: "Incubation team",
+      src: "/blocks/hub.png",
+      alt: "Idea hub",
+      height: 1400,
+      width: 1400,
     },
-    button: {
-      text: "Learn More",
-      href: "/apply",
-      variant: "default",
+
+    button1: {
+      id: "01",
+      href: "/apply-now",
+      text: "Apply Now",
+      variant: "default" as const,
+    },
+    button2: {
+      id: "02",
+      href: "/download",
+      text: "Download Guide",
+      variant: "glow" as const,
+      icon: "Arrow",
     },
     features: [
       {
-        id: "fast",
-        title: "Fast",
+        id: "stage",
+        title: "Early Stage",
         description:
-          "Business incubation and coaching by experienced and seasoned mentors.",
-        icon: "Zap",
+          "Your venture is at ideation or very early revenue, either not yet incorporated or incorporated for less than one year.",
+        icon: "Rocket",
       },
       {
-        id: "powerful",
-        title: "Powerful",
+        id: "team",
+        title: "Founder-Led",
         description:
-          "Access to Lagos Innovates network including Government, Corporates, Startups, Investors, etc.",
-        icon: "Cpu",
+          "Your team is small with no paid staff — only co-founders working together.",
+        icon: "Users",
       },
       {
-        id: "secure",
-        title: "Security",
+        id: "revenue",
+        title: "Growing Revenue",
         description:
-          "Access to administrative services such as legal, accounting, HR, etc.",
-        icon: "Lock",
+          "Your venture does not generate monthly revenues above one million naira.",
+        icon: "TrendingUp",
       },
       {
-        id: "ai",
-        title: "AI Powered",
+        id: "capital",
+        title: "Bootstrapped",
         description:
-          "An opportunity to pitch for Workspace Vouchers for 6 or 12 months.",
-        icon: "Sparkles",
+          "Your venture has never received third-party capital, including grants, equity, or debt.",
+        icon: "PiggyBank",
       },
     ],
   },
-   {
+  {
     id: "hub-loans",
-    heading: "Incubation Program",
+    heading: "Hub Loans Programs",
     subheading:
-      "Business incubation and coaching by Lagos Innovates experienced mentors.",
+      "Hub Loans are available to operators of co-working spaces, incubators and hubs in Lagos State on very attractive terms: 9 percent interest for four years. Lagos Innovates recognises the vital role that co-working spaces, incubators and hubs play in the Lagos startup ecosystem. By taking a community-focused approach, and through their programs, mentorship, networks and resources, they help catalyse growth opportunities for high potential entrepreneurs and startups. Lagos Innovates is making meaningful capital available on very attractive terms to high-performing, outcome-focused workspace providers in Lagos State. The Hub Loan program is available to operators who are looking to fund expansion or improvement of their existing facilities at current sites, or to increase their number of locations.",
     image: {
-      src: "https://images.unsplash.com/photo-1616587226960-4a03badbe8bf?q=80",
-      alt: "Incubation team",
+      src: "/blocks/hub.png",
+      alt: "Idea hub",
+      height: 1400,
+      width: 1400,
     },
-    button: {
-      text: "Learn More",
-      href: "/apply",
-      variant: "default",
+
+    button1: {
+      id: "01",
+      href: "/apply-now",
+      text: "Apply Now",
+      variant: "default" as const,
+    },
+    button2: {
+      id: "02",
+      href: "/download",
+      text: "Download Guide",
+      variant: "glow" as const,
+      icon: "Arrow",
     },
     features: [
       {
-        id: "fast",
-        title: "Fast",
+        id: "registered",
+        title: "Registered",
         description:
-          "Business incubation and coaching by experienced and seasoned mentors.",
+          "Your business is registered in Nigeria, and has its headquarters in Lagos State.",
         icon: "Zap",
       },
       {
-        id: "powerful",
-        title: "Powerful",
+        id: "facility",
+        title: "Facility",
         description:
-          "Access to Lagos Innovates network including Government, Corporates, Startups, Investors, etc.",
+          "Your business operates as a co-working facility, incubator or innovation hub located in Lagos State.",
         icon: "Cpu",
       },
       {
-        id: "secure",
-        title: "Security",
+        id: "compliant",
+        title: "Compliant",
         description:
-          "Access to administrative services such as legal, accounting, HR, etc.",
+          "At least one of your shareholders or directors is a Lagos State resident and can show evidence of personal tax compliance.",
         icon: "Lock",
       },
       {
         id: "ai",
-        title: "AI Powered",
+        title: "Track Record",
         description:
-          "An opportunity to pitch for Workspace Vouchers for 6 or 12 months.",
+          "Your business is tax compliant, and has been for the last three years (or, if active for less than three years, for the period since it has been operational).",
         icon: "Sparkles",
       },
     ],
   },
-  
-  
-]
-
-
-
-
-
-
+];
 
 export const ProgramsSection = {
   heading: "Explore our programs",
-  subheading: "Discover initiatives and opportunities crafted to support talents, startups, and innovation hubs.",
+  subheading:
+    "Discover initiatives and opportunities crafted to support talents, startups, and innovation hubs.",
   items: [
     {
       id: "idea-hub",
@@ -242,7 +286,7 @@ export const ProgramsSection = {
         link: "/programs/talent",
       },
     },
-    {   
+    {
       id: "workspace-voucher",
       title: "Workspace Vouchers",
       image: "/blocks/workspace.png",
@@ -253,7 +297,7 @@ export const ProgramsSection = {
         link: "/programs/workspace-vouchers",
       },
     },
-        {
+    {
       id: "hub-loans",
       title: "Hub Loans Programme",
       image: "/blocks/hub.png",
@@ -266,9 +310,6 @@ export const ProgramsSection = {
     },
   ],
 };
-
-
-
 
 export const Programzs = {
   heading: "Our programs made for you",
