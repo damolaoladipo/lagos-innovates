@@ -7,13 +7,11 @@ import {
 import { Section } from "@/components/ui/section";
 import { Faq } from "@/_data/faq";
 
-interface FAQProps {
-  className?: string;
-}
 
-export default function FAQ({ className }: FAQProps) {
+
+export default function FAQ() {
   return (
-    <Section className={className}>
+    <Section >
       <div className="max-w-5xl mx-auto flex flex-col items-center gap-8 mt-10 md:mt-0">
         <h2 className="text-center text-3xl font-semibold sm:text-5xl">
           {Faq.heading}
