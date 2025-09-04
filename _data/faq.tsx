@@ -1,8 +1,8 @@
 export const Faq = {
 
-  title: "Frequently Asked Questions",
-  heading: "We’re Here to Help! Find answers to some frequently asked questions here. If you can’t find what you’re looking for, please don’t hesitate to contact us directly.",
-  subheading: "Everything you need to know about Lagos Innovates programs.",
+  title: "Everything you need to know about Lagos Innovates programs.",
+  heading: "Frequently Asked Questions",
+  subheading: "We’re Here to Help! Find answers to some frequently asked questions here. If you can’t find what you’re looking for, please don’t hesitate to contact us directly.",
   items: [
     {
       question: "What do I need to apply to the Hub Loan program?",

@@ -39,6 +39,10 @@ export const Navigation = [
       },
     ],
   },
+   {
+    label: "FAQ",
+    href: "/faq",
+  },
   {
     label: "Media Centre",
     href: "/media",
@@ -53,20 +57,9 @@ export const Navigation = [
       },
     ],
   },
-  {
-    label: "FAQ",
-    href: "/faq",
-  },
+ 
   {
     label: "Contact Us",
     href: "/contact",
   },
 ];
-
-
-const menuItems = [
-    { name: 'Features', href: '#link' },
-    { name: 'Solution', href: '#link' },
-    { name: 'Pricing', href: '#link' },
-    { name: 'About', href: '#link' },
-]

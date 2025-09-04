@@ -52,7 +52,7 @@ export default function Footer() {
           </div>
 
           {/* Wrapped the last two sections in a new flex div */}
-          <div className="flex flex-col gap-10 md:flex-row lg:gap-24">
+          <div className="flex flex-col gap-10 md:flex-row lg:gap-24 mt-8 md:mt-0">
             
             <div className="space-y-2 sm:mt-10 md:mt-0">
               <h3 className="font-semibold">{programs.group}</h3>
