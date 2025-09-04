@@ -6,6 +6,8 @@ import { siteConfig } from "../_data/site-config";
 import { useLasgFont } from "@/_data/fonts";
 import { Header } from "@/components/sections/header";
 import Footer from "@/components/sections/footer";
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: {
@@ -79,8 +81,10 @@ export default function RootLayout({
           <main className="text-foreground min-h-screen w-full overflow-hidden">
             <Header />
             {children}
+            <Analytics />
+            <SpeedInsights />
           </main>
-          <Footer/>
+          <Footer />
         </AppProvider>
       </body>
     </html>
