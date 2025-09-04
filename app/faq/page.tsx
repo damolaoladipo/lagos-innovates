@@ -8,7 +8,6 @@ import { Section } from "@/components/ui/section";
 import { Faq } from "@/_data/faq";
 
 
-
 export default function FAQ() {
   return (
     <Section >

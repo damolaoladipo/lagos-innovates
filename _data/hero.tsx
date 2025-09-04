@@ -21,13 +21,13 @@ export const heroData = {
 
   button1: {
     id: "01",
-    href: "/get-started",
+    href: "/programs",
     text: "View Programs",
     variant: "default" as const,
   },
   button2: {
     id: "02",
-    href: "/buy-now",
+    href: "/about",
     text: "Learn More",
     variant: "glow" as const,
     icon: "Arrow",
