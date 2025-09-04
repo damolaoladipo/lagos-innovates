@@ -39,6 +39,10 @@ export const Navigation = [
       },
     ],
   },
+   {
+    label: "FAQ",
+    href: "/faq",
+  },
   {
     label: "Media Centre",
     href: "/media",
@@ -53,10 +57,7 @@ export const Navigation = [
       },
     ],
   },
-  {
-    label: "FAQ",
-    href: "/faq",
-  },
+ 
   {
     label: "Contact Us",
     href: "/contact",
